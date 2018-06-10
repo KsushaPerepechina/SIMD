@@ -1,0 +1,15 @@
+/*   @author: Ксения Перепечина
+     @date:   26.05.2018       */
+#title{
+		text-align: center;
+}
+
+#table{
+	   overflow: auto;
+	   border: solid black;
+	   text-align: center;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+}

@@ -1,0 +1,54 @@
+<!-- @author: Ксения Перепечина
+     @date:   26.05.2018       -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SIMD</title>
+    <link rel='stylesheet' type='text/css' href='./css/style.css'>
+</head>
+<body>
+	<script src="./source/algo.js"></script>
+	<h2 align="left"><b>Лабораторная работа №2</b></h2>
+	<h3 align="left"><b>Модель решения задачи вычисления матрицы значений на ОМКД архитектуре</b></h3>
+	<p align="left"><i>Дано: </i>сгенерированные матрицы <b>A, B, E</b> заданных размерностей <b>pxm, mxq и 1xm </b>соответственно со значениями в диапазоне [-1;1].<br>
+		<i>Получить: </i><b>C</b> – матрицу значений соответствующей размерности <b>pxq</b>.</p>
+	<p align="left"><ins><i>Вариант 1:</i></ins></br>
+		c<sub>ij</sub> = ∑<sub>k</sub>d<sub>kij</sub></br>
+		d<sub>kij</sub> = (||a<sub>ik</sub>| - |b<sub>kj</sub>|| &lt e<sub>k</sub>) ? (a<sub>ik</sub>)<sup>2</sup> : (a<sub>ik</sub>)<sup>2</sup>*b<sub>kj</sub></p>
+
+	<table align="left" border="0px" bordercolor="black">
+		<tr>
+			<td>
+				<p align="center">Размерности матриц:</p>
+				<p align="left">m=<input type="text" id="m" value="3"></p>
+				<p align="left">p=<input type="text" id="p" value="2"></p>
+				<p align="left">q=<input type="text" id="q" value="2"></p>
+				<p align="center">Количество процессорных<br> элементов:</p>
+				<p align="left">n=<input type="text" id="n" value="8"></p>
+			</td>
+			<td>
+				<p align="center"> Длины операторов:</p>
+				<p align="left">Время оператора "| |"=<input type="text" id="abs" value="2"></p>
+				<p align="left">Время оператора " - "=<input type="text" id="minus" value="2"></p>
+				<p align="left">Время оператора " < "=<input type="text" id="less" value="2"></p>
+				<p align="left">Время оператора " ^2 "=<input type="text" id="square" value="2"></p>
+				<p align="left">Время оператора " * "=<input type="text" id="multi" value="2"></p>
+				<p align="left">Время оператора " + "=<input type="text" id="plus" value="2"></p>
+			</td>
+		</tr>
+	</table>
+
+	<p align="center"><button onclick="main()">Запуск</button></p>
+
+	<script type="text/javascript" src="libraries/google_charts/loader.js"></script>
+
+	<div id="curve_chart"></div>
+	<!--<div id="curve_chart2"></div>
+	<div id="curve_chart3"></div>
+	<div id="curve_chart4"></div>
+	<div id="curve_chart5"></div>
+	<div id="curve_chart6"></div>-->
+
+</body>
+</html>
